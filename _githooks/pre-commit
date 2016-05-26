@@ -1,0 +1,8 @@
+#!/bin/sh
+echo ">>> Executing [./website.sh] to convert .. into {{ site.url }} <<<"
+./website.sh
+
+git diff --cached --name-only | while read line; do
+    echo ">>> git add $line <<<"
+    git add $line
+done
