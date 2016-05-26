@@ -9,3 +9,5 @@ _site
 codekit-config.json
 node_modules
 npm-debug.log*
+
+*.md-e
