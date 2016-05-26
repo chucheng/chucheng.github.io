@@ -2,7 +2,7 @@
 echo ">>> Executing [./website.sh] to convert .. into {{ site.url }} <<<"
 ./website.sh
 
-git diff --cached --name-only | while read line; do
+git diff --cached --name-only --diff-filter=ACMR | grep "_post/" | grep -e "\.md$" | while read line; do
     echo ">>> git add $line <<<"
     git add $line
 done
